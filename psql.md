@@ -29,3 +29,11 @@
 ## To import any table's data store in text file 
 - COPY public.__TABLE_NAME__(id, , , , ) FROM '_TEXT_FILE_PATH_';
 
+## To setup new instance of psql (different port)
+- initdb -D _NEW_DIR_NAME_ -U postgres -W
+(prompts for password)
+
+- pg_ctl register -N _SERVICE_NAME_ -D _NEW_DIR_NAME_ -o "-p _NEW_PORT_"
+
+- pg_ctl start -D _NEW_DIR_NAME_ -o "-p _NEW_PORT_"
+
