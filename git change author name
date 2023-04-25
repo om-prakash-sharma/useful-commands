@@ -1,0 +1,10 @@
+## Change author name in git commit 
+
+#### First run git rebase with commit nos or id 
+>	git rebase -i HEAD~4
+
+#### Then run git commit --amend with author name
+>  git commit --amend --author="Om Sharma <om@someemail.com>" 
+
+#### Then run git rebase	continue
+> git rebase --continue
